@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="lab_8.css">
+</head>
+<body style="background-image: url(img2.jpg);">
+  <h1>Прайс-лист</h1>
+  <table id="myTable" border="1">
+    <tr>
+      <td>ID</td>
+      <td>Вид мебели</td>
+      <td>Тип</td>
+      <td>Цена</td>
+          <td>Атрибут</td>
+      <td>Страна</td>
+     
+    </tr>
+  </table>
+  <script >
+   let xmlstr=`<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/css' href='lab_8.css'?>
+
+<MAGAZIN> 
+    <furniture>
+<id>1</id>
+<name>Шкаф</name>
+<art>Для одежды</art>
+<buy>54 000 руб.</buy> 
+<atribut>Зеркало на передней дверце</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+    <furniture> 
+<id>2</id>
+<name>Шкаф</name>
+<art>Кухонный</art>
+<buy>38 000 руб.</buy> 
+<atribut>Прозрачный дверцы</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+    </furniture>
+
+    <furniture>  
+<id>3</id>
+<name>Стол</name>
+<art> Журнальный</art>
+<buy>15 000 руб.</buy> 
+<atribut>Стеклянная столешница</atribut>
+<creator>Россия</creator>
+<material> Металл</material>  
+</furniture>
+
+<furniture>
+<id>4</id>
+<name>Стол</name>
+<art>Кухонный</art>
+<buy>8 000 руб.</buy> 
+<atribut>Дервянный</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture> 
+
+<furniture>
+<id>5</id>
+<name>Кресло</name>
+<art>Кожанное</art>
+<buy>23 000</buy> 
+<atribut>На ножках</atribut>
+<creator>Россия</creator>
+<material> Металл</material>  
+</furniture>
+
+<furniture>
+<id>6</id>
+<name>Стулья</name>
+<art> Для кухни</art>
+<buy>2 300 руб./шт.</buy> 
+<atribut>Желеные с бархатной сидушкой</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>7</id>
+<name>Диван</name>
+<art>Для гостинной</art>
+<buy>42 000 руб.</buy> 
+<atribut>Угловой</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>8</id>
+<name>Диван</name>
+<art>Для гостинной/кухни/спальни</art>
+<buy>37 000 руб. </buy> 
+<atribut>Раскладной </atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>9</id>
+<name>Каркас для кровати</name>
+<art>Для спальни</art>
+<buy>17 000 руб.</buy> 
+<atribut>Деревянный</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>10</id>
+<name>Каркас для двуспальной кровати</name>
+<art>Для спальни</art>
+<buy>21 000 руб.</buy> 
+<atribut>Деревянный</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture> 
+
+<furniture>
+<id>11</id>
+<name>Каркас для кровати</name>
+<art>Для спальни</art>
+<buy>11 000 руб.</buy> 
+<atribut>Металлический</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>12</id>
+<name>Каркас для двуспальной кровати</name>
+<art>Для спальни</art>
+<buy>15 000 руб.</buy> 
+<atribut>Металлический</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture> 
+
+<furniture>
+<id>13</id>
+<name>Рабочий стол</name>
+<art>Для гостинной/спальни</art>
+<buy>12 000 руб.</buy> 
+<atribut>Дервянный</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>14</id>
+<name>Тумба</name>
+<art>Деревянная/металлическая</art>
+<buy>8 000 руб.</buy> 
+<atribut>Для гостинной/спальни</atribut>
+<creator>Россия</creator>
+<material> Металл</material>  
+</furniture>
+
+<furniture>
+<id>15</id>
+<name>Кресло</name>
+<art>Бархатное</art>
+<buy>19 000 руб.</buy> 
+<atribut>Для гостинной/спальни</atribut>
+<creator>Россия</creator>
+<material> Металл</material>  
+</furniture>
+
+<furniture>
+<id>16</id>
+<name>Кресло</name>
+<art>Кожанное</art>
+<buy>16 000 руб.</buy> 
+<atribut>Для гостинной/офиса</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>17</id>
+<name>Стол кухонный</name>
+<art>Деревянный</art>
+<buy>10 000</buy> 
+<atribut>Для кухни</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>18</id>
+<name>Полки</name>
+<art>Деревянные</art>
+<buy>5 000 руб.</buy> 
+<atribut>Гостинная/офис/спальня</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>19</id>
+<name>Пуфик</name>
+<art>Кожа/бархат</art>
+<buy>11 000 руб.</buy> 
+<atribut>Для спальни/гостинной</atribut>
+<creator>Россия</creator>
+<material> Металл</material> 
+</furniture>
+
+<furniture>
+<id>20</id>
+<name>Софа</name>
+<art>Текстиль</art>
+<buy>12 000 руб.</buy> 
+<atribut>Для гостинной</atribut>
+<creator>Россия</creator> 
+<material> Металл</material> 
+</furniture>
+</MAGAZIN>`;
+
+let parser = new DOMParser();
+let xmlDoc = parser.parseFromString(xmlstr, "text/xml");
+
+let table = document.getElementById("myTable");
+let furniture = xmlDoc.getElementsByTagName("furniture");
+
+for (let i = 0; i < furniture.length; i++) {
+  let row = table.insertRow();
+  let cells = ["id", "name", "art", "buy", "atribut", "creator"];
+  for (let j = 0; j < cells.length; j++) {
+    let cell = row.insertCell();
+    cell.textContent = furniture[i].getElementsByTagName(cells[j])[0].childNodes[0].nodeValue;
+  }
+}
+  </script>
+</body>
+</html>

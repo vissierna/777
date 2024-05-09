@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+  <title>Обзор товаров по категориям</title>
+  <link rel="stylesheet" type="text/css" href="1.css">
+</head>
+<body>
+  <div>
+    <h1>Обзор товаров по категориям</h1>
+    <div id="gallery">
+      <a href="#" onclick="openFile()"><img id="image" src="image/1.jpg"></a> <!-- Добавляем onclick с вызовом функции openFile() -->
+    </div>
+    <div class="button-container">
+      <button onclick="previousImage()" class="button">Назад</button>
+      <button onclick="nextImage()" class="button">Вперед</button>
+    </div>    
+  </div>
+
+  <script>
+    let i = 0;
+    let images = ["1", "4", "2"];
+    let files = ["product1.html", "product2.html", "product3.html"]; // Создаем массив files для хранения названий файлов
+
+    // Функция для отображения предыдущей картинки
+    function previousImage() {
+      if (i === 0) {
+        i = images.length - 1;
+      } else {
+        i--;
+      }
+      document.getElementById("image").src = "image/" + images[i] + ".jpg";
+    }
+
+    // Функция для отображения следующей картинки
+    function nextImage() {
+      if (i === images.length - 1) {
+        i = 0;
+      } else {
+        i++;
+      }
+      document.getElementById("image").src = "image/" + images[i] + ".jpg";
+    }
+
+    // Функция для открытия файла при клике на картинку
+    function openFile() {
+      window.location.href = files[i]; // Перенаправляем текущую страницу на выбранный файл
+    }
+  </script>
+</body>
+</html>

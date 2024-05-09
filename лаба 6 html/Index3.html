@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <style>
+            button {
+             background: #008EB0; 
+             color: #fff; 
+             border: none; 
+             padding: 1rem 1.5rem; 
+             margin-bottom: 1rem; 
+            }
+            .red { background: #d64bc4bb; }
+            
+           </style>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style/style3.css">
+    <script src="script.js"></script>
+    </head>
+
+    <body style="background-image: url(img2.jpg);">
+        <div class="container vh-100">
+            <div class="row vh-100 justify-content-center align-items-center">
+              <div class="col-lg-5 col-md-2">
+                <div class="card text-center" style="background-color: rgba(228, 145, 245, 0.521);">
+                  <div class="card-body" onsubmit="return ValidMail();">
+                    <h2 style="color:#ffffff" class="mb-3">Оставьте отзыв</h2>
+                    <div class="text-start">
+                        <p style="margin-bottom: 5px; margin-left: 4px; color:#ffffff">Имя:</p>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Иван"
+                            style="margin-bottom: 10px;"
+                            id="name"
+                            name="name"
+                        />
+                        <label class="form-label" style="margin-bottom: 5px; margin-left: 4px;color:#ffffff">Адрес электронной почты:</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            aria-describedby="emailHelpId"
+                            placeholder="ivan_ivanov@mail.ru"
+                            style="margin-bottom: 10px;"
+                            id="email"
+                            name="email"
+                            border: none;
+                        />
+                        
+                        <label class="form-label" style="margin-bottom: 5px; margin-left: 4px;color:#ffffff">Отзыв:</label>
+                        <label for="" class="form-label"></label>
+                        <textarea class="form-control mb-3" rows="5" id="textarea" name="textarea"></textarea>
+                    </div>
+                    <button type="button" class="red" onClick="ValidMail();">Отправить</button>
+                        <div id="message"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
